@@ -7,12 +7,14 @@ import org.junit.Test;
 
 public class ReviewTest {
 	
+	ReviewRepository underTest;
+	
 	private long id = 1L;
 	private Review review = new Review(id, "title", "imageURL", "reviewCategory", "content", "date", "description", "collection");
 	
 	@Test
 	public void shouldFindAReview() {
-		ReviewRepository underTest = new ReviewRepository(review);
+		underTest = new ReviewRepository(review);
 		Review result = underTest.findOne(id);
 		assertThat(result, is(review));
 	}
