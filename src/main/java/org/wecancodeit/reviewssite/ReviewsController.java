@@ -1,6 +1,8 @@
 package org.wecancodeit.reviewssite;
 
+import java.util.Collection;
 import javax.annotation.Resource;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
