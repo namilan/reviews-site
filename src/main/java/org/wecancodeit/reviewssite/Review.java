@@ -2,18 +2,17 @@ package org.wecancodeit.reviewssite;
 
 public class Review {
 	
-	private long id;
-	private String title;
-	private String imageURL;
-	private String reviewCategory;
-	private String content;
-	private String date;
-	private String synopsis;
-	private String tag;
+	public long id;
+	protected String title;
+	protected String imageURL;
+	protected String reviewCategory;
+	protected String content;
+	protected String date;
+	protected String synopsis;
 	
 
 	public Review(long id, String title, String imageURL, String reviewCategory, String content, String date,
-			String synopsis, String tag) {
+			String synopsis) {
 		this.id = id;
 		this.title = title;
 		this.imageURL = imageURL;
@@ -21,7 +20,6 @@ public class Review {
 		this.content = content;
 		this.date = date;
 		this.synopsis = synopsis;
-		this.tag = tag;
 	}
 
 	public Long getId() {
@@ -52,9 +50,4 @@ public class Review {
 		return synopsis;
 	}
 	
-	public String getTag() {
-		return tag;
-	}
-
-
 }
