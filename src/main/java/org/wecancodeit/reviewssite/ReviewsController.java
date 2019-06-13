@@ -13,6 +13,11 @@ public class ReviewsController {
 	@Resource
 	ReviewRepository repository;
 
+	
+	@RequestMapping("/show-reviews")
+	public String findAllReviews() {
+		return "reviews";
+	}
 		
 	@RequestMapping("/reviews")
 	public String fetchReviews(Model model) {
