@@ -1,8 +1,6 @@
 package org.wecancodeit.reviewssite;
 
-import java.util.Collection;
 import javax.annotation.Resource;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,15 +14,15 @@ public class ReviewsController {
 	ReviewRepository repository;
 
 		
-	@RequestMapping("reviews")
+	@RequestMapping("/reviews")
 	public String fetchReviews(Model model) {
 		model.addAttribute("reviewsAsCollection", repository.findAll());
 		return "reviews";
 	}
 	
-	@RequestMapping("onereview")
+	@RequestMapping("/oneReview")
     public String fetchOne(@RequestParam(value="id") Long id, Model model) {
-         model.addAttribute("onereview", repository.findOne(id));
-         return "soloreview";
+         model.addAttribute("oneReview", repository.findOne(id));
+         return "oneReview";
      }
 }

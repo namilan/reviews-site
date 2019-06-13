@@ -1,14 +1,16 @@
 package org.wecancodeit.reviewssite;
 
+import java.util.HashMap;
+
 public class Review {
 	
 	public long id;
-	protected String title;
-	protected String imageURL;
-	protected String reviewCategory;
-	protected String content;
-	protected String date;
-	protected String synopsis;
+	protected String title = "title";
+	protected String imageURL = "imageURL";
+	protected String reviewCategory = "reviewCategory";
+	protected String content = "Content";
+	protected String date = "date";
+	protected String synopsis = "synopsis";
 	
 
 	public Review(long id, String title, String imageURL, String reviewCategory, String content, String date,
