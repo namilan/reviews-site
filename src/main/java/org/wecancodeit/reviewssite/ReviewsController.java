@@ -16,15 +16,15 @@ public class ReviewsController {
 	ReviewRepository repository;
 
 		
-	@RequestMapping("/reviews")
+	@RequestMapping("reviews")
 	public String fetchReviews(Model model) {
 		model.addAttribute("reviewsAsCollection", repository.findAll());
 		return "reviews";
 	}
 	
-	@RequestMapping("/onereview")
+	@RequestMapping("onereview")
     public String fetchOne(@RequestParam(value="id") Long id, Model model) {
          model.addAttribute("onereview", repository.findOne(id));
-         return "onereview";
+         return "soloreview";
      }
 }

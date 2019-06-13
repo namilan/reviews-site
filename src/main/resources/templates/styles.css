@@ -1,0 +1,11 @@
+
+.jumbotron {
+	background-image: url("images/walter2.jpg");
+	background-size: auto;
+	height: 600px;
+	
+}
+
+#splash {
+	font-size: 35px;
+}

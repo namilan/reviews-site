@@ -1,9 +1,33 @@
+    
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Reviews</title>
+    <title>MMO Review's for PC</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
 </head>
 <body>
-    <h1>A list of Reviews.</h1>    
+
+    	<nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                    <a class="navbar-brand" href="http://localhost:8080/reviews">
+                            <p>Return Home</p>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <h1>MMO Review for PC.</h1>
+
+	<div th:each = "review: ${reviews">
+    <p th:text="'Game ID:  ' + ${review.id}"></p>
+	<p th:text="'Game title:  ' + ${review.title}"></p>
+	<p th:text="'Category:  ' + ${review.reviewCategory}"></p>
+    <img th:src="${review.imageUrl}"/>
+    </div>
+	<p></p>
+
 </body>
 </html>
