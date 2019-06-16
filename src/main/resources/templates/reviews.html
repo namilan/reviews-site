@@ -25,7 +25,7 @@
     <p th:text="'Game ID:  ' + ${review.id}"></p>
 	<p th:text="'Game title:  ' + ${review.title}"></p>
 	<p th:text="'Category:  ' + ${review.reviewCategory}"></p>
-    <img th:src="${review.imageUrl}"/>
+    <img th:src=" 'Image: ' + ${review.imageUrl}"/></p>
     </div>
 	<p></p>
 
